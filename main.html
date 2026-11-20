@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAM-TALKS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-container">
+            <a href="main.html" class="brand-link">
+            <img src="photo_2026-02-08_23-17-08.jpg" width="50" height="50" alt="">
+            FAM-TALKS
+            </a>            
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <main class="main-layout">
+        <section class="content-area">
+            <!-- search bar -->
+            <form action="/search" method="GET" class="search-form">
+                <label for="search-input">Пошук</label>
+                <input type="text" id="search-input" name="q" placeholder="SEARCH">
+                <button type="submit" class="css-graphic-btn">Шукати</button>
+            </form>
+
+            <div class="threads-list">
+                <article class="thread-card">
+                    <h2 class="thread-title"><a href="thread.html">Does anyone know how to solve this?</a><a href="tag.html">#math</a></h2>
+                    <div class="thread-actions">
+                        <button class="like-btn" aria-label="Лайк"></button>
+                        <button class="dislike-btn" aria-label="Дизлайк"></button>
+                    </div>
+                </article>
+                <article class="thread-card">
+                    <h2 class="thread-title"><a href="---">Thread Head 2</a></h2>
+                    <div class="thread-actions">
+                        <button class="like-btn" aria-label="Лайк"></button>
+                        <button class="dislike-btn" aria-label="Дизлайк"></button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- sidebar -->
+        <aside class="sidebar">
+            <h2>Tags</h2>
+            <ul class="tags-list">
+                <li><a href="#">#tag1</a></li>
+                <li><a href="#">#news</a></li>
+                <li><a href="#">#design</a></li>
+                <li><a href="#">#tech</a></li>
+                <li><a href="tag.html">#math</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- auxiliary info pages -->
+    <footer class="site-footer">
+        <nav aria-label="Нижня навігація">
+            <ul class="footer-links">
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="#">policy</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">faq</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

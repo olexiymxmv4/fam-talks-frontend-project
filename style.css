@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 10;
+    padding: 10;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+#main-header {
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+    padding: 15px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.brand-link img {
+    display: block;
+    flex: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #3b5998;
+}
+a:hover {
+    text-decoration: underline;
+    color: #ff0000;
+}
+
+.login-btn {
+    background-color: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    color: #000;
+    transition: background-color 0.3s;
+}
+.login-btn:hover {
+    background-color: #ccc;
+    text-decoration: none;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #ccc;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar > h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #000;
+}
+
+.tags-list {
+    list-style: none;
+}
+.tags-list li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.thread-card {
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.thread-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #3b5998;
+}
+
+.thread-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.like-btn, .dislike-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+.like-btn { background-color: #3b5998; }
+.dislike-btn { background-color: #ff3b3b; }
+
+/* ПЛАВАЮЧІ ЕЛЕМЕНТИ (FLOAT) */
+.float-left {
+    float: left;
+    margin: 0 15px 15px 0;
+    border: 1px solid #ccc;
+}
+.float-right {
+    float: right;
+    margin: 0 0 15px 15px;
+    border: 1px solid #ccc;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.comments-section {
+    margin-top: 30px;
+}
+
+.thread-author {
+    margin-top: -10px;
+    color: #666;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+}
+
+.comment-form input[type="text"] {
+    margin-bottom: 0;
+}
+
+.submit-btn {
+    align-self: flex-start;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.comments-list {
+    padding-left: 25px;
+}
+
+.comments-list li {
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    color: #3b5998;
+}
+
+.comments-list li p {
+    margin: 4px 0 0;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.info-table th, .info-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+.info-table th {
+    background-color: #e0e0e0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.site-footer {
+    border-top: 3px solid #000;
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    margin-top: 40px;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-layout {
+        grid-template-columns: 1fr; /* Перехід в 1 колонку на мобільних */
+    }
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

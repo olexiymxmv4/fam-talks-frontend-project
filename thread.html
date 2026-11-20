@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAM-TALKS - Thread</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-container">
+            <a href="main.html" class="brand-link">
+            <img src="photo_2026-02-08_23-17-08.jpg" width="50" height="50" alt="">
+            FAM-TALKS
+            </a>            
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <main class="main-layout">
+        <article class="full-thread">
+            <h1>Does anyone know how to solve this?</h1>
+            <a href="tag.html">#math</a>
+            <p class="thread-author">Posted by <strong>Admin</strong></p>
+            
+            <div class="thread-content">
+                <img src="photo_2026-11-19_20-35-00.jpg" alt="Скріншот 1" width="300" class="float-right">
+                <p>Hi guys. I've got that problem that has to be solved by tomorrow but i have no idea how to. Could y'all help me?</p>
+                <div class="clearfix"></div>
+            </div>
+
+            <section class="comments-section">
+                <h2>Comments</h2>
+
+                <form id="comment-form" class="comment-form">
+                    <label for="comment-author">Your name</label>
+                    <input type="text" id="comment-author" name="author" placeholder="Enter your name">
+                    <label for="comment-text">Add a comment</label>
+                    <textarea id="comment-text" name="comment" rows="4" placeholder="Write your comment..."></textarea>
+                    <button type="button" class="submit-btn">Post comment</button>
+                </form>
+
+                <ol id="comments-list" class="comments-list">
+                    <li>
+                        <strong class="comment-author">Sam</strong>
+                        <p>Solved it lately. I'll DM you</p>
+                    </li>
+                    <li>
+                        <strong class="comment-author">Jordan</strong>
+                        <p>Looks scary...</p>
+                    </li>
+                </ol>
+            </section>
+        </article>
+                <!-- sidebar -->
+        <aside class="sidebar">
+            <h2>Tags</h2>
+            <ul class="tags-list">
+                <li><a href="#">#tag1</a></li>
+                <li><a href="#">#news</a></li>
+                <li><a href="#">#design</a></li>
+                <li><a href="#">#tech</a></li>
+                <li><a href="tag.html">#math</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- auxiliary info pages -->
+    <footer class="site-footer">
+        <nav aria-label="Нижня навігація">
+            <ul class="footer-links">
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="#">policy</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">faq</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
