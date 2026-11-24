@@ -14,7 +14,7 @@ body {
     line-height: 1.6;
 }
 
-#main-header {
+body > header {
     background-color: #fff;
     border-bottom: 2px solid #000;
     padding: 15px 20px;
@@ -66,7 +66,7 @@ a:hover {
     text-decoration: none;
 }
 
-.main-layout {
+main {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
@@ -84,7 +84,32 @@ input[type="text"] {
     margin-bottom: 20px;
 }
 
-.sidebar > h2 {
+/* search bar: input and button on one row, button on the right */
+.search-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+.search-form input[type="text"] {
+    flex: 1;
+    min-width: 0;
+    margin-bottom: 0;
+    border-radius: 25px 0 0 25px;
+}
+.search-btn {
+    padding: 0 24px;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    background-color: #3b5998;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.search-btn:hover {
+    background-color: #2d4373;
+}
+
+aside > h2 {
     text-align: center;
     margin-bottom: 15px;
     border-bottom: 1px solid #000;
@@ -92,6 +117,8 @@ input[type="text"] {
 
 .tags-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .tags-list li {
     margin-bottom: 10px;
@@ -134,7 +161,7 @@ input[type="text"] {
 .like-btn { background-color: #3b5998; }
 .dislike-btn { background-color: #ff3b3b; }
 
-/* ПЛАВАЮЧІ ЕЛЕМЕНТИ (FLOAT) */
+/* FLOATING ELEMENTS (FLOAT) */
 .float-left {
     float: left;
     margin: 0 15px 15px 0;
@@ -229,7 +256,7 @@ input[type="text"] {
     border: 0;
 }
 
-.site-footer {
+body > footer {
     border-top: 3px solid #000;
     padding: 20px;
     text-align: center;
@@ -241,12 +268,13 @@ input[type="text"] {
     justify-content: center;
     gap: 30px;
     list-style: none;
-    margin-bottom: 10px;
+    padding: 0;
+    margin: 0 0 10px;
 }
 
 @media screen and (max-width: 768px) {
-    .main-layout {
-        grid-template-columns: 1fr; /* Перехід в 1 колонку на мобільних */
+    main {
+        grid-template-columns: 1fr; /* Switch to a single column on mobile */
     }
     .header-container {
         flex-direction: column;
